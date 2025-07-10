@@ -53,7 +53,7 @@ The following table explains the customer-facing key hierarchy and concepts of t
 
 
 <details>
-<summary> Definitions and indicators </summary>
+<summary> Definitions and indicators (expand) </summary>
 
 
 
@@ -436,25 +436,39 @@ The detailed implementation status can be found here: <add link>
 
 This project uses Make for building and managing the application. Here are the available make targets:
 
-### Basic Build Commands
+<details>
+<summary> Basic Build Commands </summary>
+
 - `make all` - Clean, generate proto files, build, and test
 - `make build` - Build all services (cross-compile for Linux by default)
 - `make local` - Build for local development (host OS)
 - `make dev` - Development build (clean, proto, build, test)
 - `make clean` - Remove build artifacts
 
-### Development Commands
+</details>
+
+<details>
+<summary> Development Commands </summary>
+ 
 - `make test` - Run all tests
 - `make proto` - Generate Protocol Buffer code
 - `make lint` - Run linter
 - `make dev-tools` - Install development tools (golangci-lint, protoc-gen-go, protoc-gen-go-grpc)
 
-### Advanced Build Commands
+</details>
+
+<details>
+<summary> Advanced Build Commands </summary>
+
 - `make build-all` - Build for multiple platforms (Linux/macOS, amd64/arm64)
 - `make install` - Install binaries (Linux only)
 - `make version` - Show version information
 
-### Examples
+</details>
+
+<details>
+<summary> Examples </summary>
+
 ```bash
 # Build for local development
 make local
@@ -471,5 +485,6 @@ make dev-tools
 # Build for all platforms
 make build-all
 ```
+</details>
 
 The build process creates binaries in the `bin/` directory for local builds and `build/` directory for multi-platform builds.
