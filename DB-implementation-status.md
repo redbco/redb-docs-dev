@@ -13,9 +13,9 @@ The status indicators are:
 - ✖️ **Unsupported** 
 
 | Database | Type | Connectivity | Schema Control |Data| Replication | 
-|----------|------|--------------|----------------|----|-------------|
+|----------|------|:---------:|:-----------:|:--:|:----------:|
 
-| Cassandra | Wide-Column | ⚠️ | ⚠️ | ⚠️ |  ⚠️|
+| Cassandra | Wide-Column | ⚠️ | ⚠️ | ⚠️ | ⚠️|
 | Chroma | Vector | ⛔️ | ⛔️ | ⛔️ | ✖️ |
 | Clickhouse | Columnar Analytics | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
 | CosmosDB | Multi-Model  | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
@@ -35,5 +35,5 @@ The status indicators are:
 | PostgreSQL | Relational |  ⚠️ | ⚠️ | ⚠️ | ⚠️|
 | Redis | Key-Value Store | ⚠️ | ⚠️ | ⚠️ | ⚠️|
 | Snowflake | Columnar Analytics | ⚠️ | ⚠️ | ⚠️ | ⚠️|
-| Weaviate | Vector | OLTP | ⛔️ | ⛔️ | ⛔️ | ✖️ |
-| Zilliz | Vector | OLTP | ⛔️ | ⛔️ | ⛔️ | ✖️ |
+| Weaviate | Vector | ⛔️ | ⛔️ | ⛔️ | ✖️ |
+| Zilliz | Vector | ⛔️ | ⛔️ | ⛔️ | ✖️ |
