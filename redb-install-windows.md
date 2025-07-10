@@ -1,4 +1,4 @@
-# Installation Guide (Windows)
+# Installation Guide for Windows (TO_BE_UPDATED)
 
 Follow these steps to install the software on a Windows environment.
 
@@ -10,7 +10,7 @@ Follow these steps to install the software on a Windows environment.
 
 ## Download the Installer
 
-1. Go to the official website or trusted source for the software.
+1. Click here <ADD LINK> to download the software.
 2. Download the Windows installer file (usually `.exe` or `.msi` format).
 
 ## Run the Installer
