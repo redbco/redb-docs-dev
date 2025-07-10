@@ -14,7 +14,6 @@ The status indicators are:
 
 | Database | Type | Connectivity | Schema Control |Data| Replication | 
 |----------|------|:---------:|:-----------:|:--:|:----------:|
-
 | Cassandra | Wide-Column | ⚠️ | ⚠️ | ⚠️ | ⚠️|
 | Chroma | Vector | ⛔️ | ⛔️ | ⛔️ | ✖️ |
 | Clickhouse | Columnar Analytics | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
