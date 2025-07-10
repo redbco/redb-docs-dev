@@ -1,4 +1,4 @@
-# Installation Guide for macOS
+# Installation Guide for macOS (TO BE UPDATED)
 
 Follow these steps to install the software on macOS.
 
