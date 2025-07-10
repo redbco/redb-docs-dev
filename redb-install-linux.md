@@ -1,4 +1,4 @@
-# Linux installation quick guide (TO-BE-UPDATED)
+# Installation guide for LINUX (TO-BE-UPDATED)
 
 
 This guide provides step-by-step instructions for installing software on Linux systems. The steps below are suitable for most open-source projects and can be adapted for your specific software.
