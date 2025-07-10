@@ -1,4 +1,4 @@
-# CLI Endpoint Status
+# CLI Endpoint Implementation Status (updated July 10th, 2025)
 
 ## The following tables show the implementation status of CLI commands across different resource types. The status indicators are:
 - ✅ **Implemented** - Command is fully functional
