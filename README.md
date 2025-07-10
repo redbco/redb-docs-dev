@@ -8,6 +8,11 @@ Key Value Propositions of reDB: <br>
 * Unified model for schema and data harmonization.<br>
 * AI-ready (MCP server), privacy-first, and compliance by design.<br>
 
+## Architecture overview
+
+![reDB Architecture Overview](https://github.com/redbco/redb-docs-dev/blob/main/reDB_Architecture.png)
+
+
 ## Main components and definitions
 
 The following table explains the customer-facing key hierarchy and concepts of the application.
@@ -47,7 +52,7 @@ The following table explains the customer-facing key hierarchy and concepts of t
 | **MCP Prompt** | MCP Server | A prompt template as defined in the MCP definition |
 
 
-## Database Support Matrix
+## Databases Support Matrix
 
 
 
