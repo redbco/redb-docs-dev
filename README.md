@@ -428,7 +428,7 @@ The detailed implementation status can be found here: <add link>
 </details>
 
 ## Installation packages
-### [LINUX users: installation guide](packages.redb.co)
+### [LINUX users: installation guide](https://github.com/redbco/redb-docs-dev/blob/main/red-install-linux.md)
 ### [macOS users: installation guide](packages.redb.co)
 ### [Windows users: installation guide](packages.redb.co)
 
