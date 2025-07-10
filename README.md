@@ -98,7 +98,7 @@ The indicators are:
 | Weaviate | Vector | OLTP | ⛔️ | ⛔️ | ⛔️ | 
 | Zilliz | Vector | OLTP | ⛔️ | ⛔️ | ⛔️ | 
 
-The detailed implementation status can be found here: <add link>
+The detailed implementation status can be found [here](https://github.com/redbco/redb-docs-dev/blob/main/DB-implementation-status.md)
 
 ## CLI Endpoint Commands and Definitions
 
