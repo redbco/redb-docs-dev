@@ -427,6 +427,10 @@ The detailed implementation status can be found here: <add link>
 
 </details>
 
+## CLI Commands Implementation Status
+
+The latest status can be found from here: [CLI Status](https://github.com/redbco/redb-docs-dev/blob/main/CLI-implementation-status.md)
+
 ## Installation packages
 ### [LINUX users: installation guide](https://github.com/redbco/redb-docs-dev/blob/main/red-install-linux.md)
 ### [macOS users: installation guide](https://github.com/redbco/redb-docs-dev/blob/main/red-install-macos.md)
