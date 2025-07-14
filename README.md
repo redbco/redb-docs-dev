@@ -439,7 +439,7 @@ The latest status can be found from here: [CLI Status](https://github.com/redbco
 ## Installation packages
 ### [LINUX users: installation guide](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-linux.md)
 ### [macOS users: installation guide](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-macos.md)
-### [Windows users: installation guide](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-windows.md)
+### Windows users: installation guide to be added
 
 ## Build Instructions
 
