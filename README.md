@@ -2,24 +2,16 @@
 
 Easily and rapidly move data between your favorite databases with instant automatic schema matching for maximum efficiency.
 
+## How to get started
 
-## 3 plans for different needs:
+Quick start instructions for Debian (arm64/amd64)
 
-<INS>Developer Plan </INS> (FREE) includes: DB connectivity for select DBs, schema and version control, limited replication features, limited migration features (# of tables), MCP server access, authentication & role-based access, CLI for managing the application, community support
+> [!IMPORTANT]
+> You need to have PostgreSQL 17 (with a user CREATEDB, CREATEROLE, and LOGIN privileges) and Redis Server installed
 
-<INS>Startup & Teams Plan </INS> ($20/month per user, up-to 3 nodes included) includes: same as Developer plan AND automated schema rollback, full replication features, full migration features, team collaboration workflows, limited analytics access, email support
+### Installation
 
-<INS>Enterprise Plan </INS> (custom pricing) includes: Same as Startup/Team plan AND unlimited nodes, extended DB connectivity, multi-tenancy support, real-time multi-master replication, full auditing & policy features, full analytics access, enterprise support with SLA
- 
-
-## Quick start for developers
-
-LINUX instructions in brief
-
-- Install PostgreSQL 17 as prerequisite (if not installed already)
-- Create an admin user that the application can use for initialization
-- Install Redis Server as a prerequisite (if not installed already)
-
+Download and extract the application package
 ```bash
 # reDB package for arm64-based systems
 wget https://download.redb.co/linux/latest/arm64/redb-latest-linux-arm64.tar.gz
@@ -31,60 +23,92 @@ wget https://download.redb.co/linux/latest/amd64/redb-latest-linux-amd64.tar.gz
 tar -xvzf redb-latest-linux-amd64.tar.gz
 ```
 
+Initialize the installation and create the default tenant and user
 ```bash
-# Initialize the reDB installation
 ./redb-supervisor --initialize
 ```
-```bash
 
-# Initialization is complete, ready to start the application
+Start the application (or run as a service)
+```bash
 ./redb-supervisor
 ```
 
+### First use
+Login using the CLI
 ```bash
-# Logging in
-redb@redb-demo:~$ ./redb-cli auth login
-```
-```bash
-# Creating your first workspace
-redb@redb-demo:~$ ./redb-cli add workspace
+./redb-cli auth login
 ```
 
-More detailed instructions: 
-- [LINUX users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-linux.md)
-- macOS users: link to be added
-- Windows users: link to be added
+Create and select a workspace (used to logically separete database environments)
+```bash
+./redb-cli add workspace
+./redb-cli select workspace
+```
 
-## Architecture overview
+Connect your first database instance
+```bash
+./redb-cli connect instance
+```
 
-![reDB Architecture Overview](https://github.com/redbco/redb-docs-dev/blob/main/reDB_Architecture.png)
+Connect logical databases
+```bash
+./redb-cli connect database
+```
+
+Show the database schema and tables overview
+```bash
+./redb-cli show database <database_name> --schema
+./redb-cli show database <database_name> --tables
+```
+
+Let the platform automatically map a source table to a target table
+```bash
+./redb-cli add table-mapping
+```
+
+Clone the data from the source table to the target table
+```bash
+./redb-cli clone table-data <mapping_name>
+```
+
+## Detailed instructions
+
+- [Debian: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-linux.md)
+- MacOS: instructions to be added
+- Windows: instructions to be added
+
+## Plans
+
+The reDB platform is openly available as a free developer version for non-commercial use. We also offer paid versions for commercial use.
+
+| Feature | Developer | Startup & Teams | Enterprise |
+|---------| :-------: | :-------------: | :--------: |
+| **Pricing** | Free | Usage-based | Custom Pricing |
+| **Database Support** | Mainly Open-source | Mainly Open-source | Open-source and Commercial |
+| **Full Mesh Connectivity** | ❌ | ✅ | ✅ |
+| **Schema Version Control** | ✅ | ✅ | ✅ |
+| **Data Replication** | Limited | Limited | Advanced |
+| **Migration Features** | Limited | Full | Full |
+| **MCP Server Access** | ✅ | ✅ | ✅ |
+| **Authentication & Role-based Access** | ✅ | ✅ | ✅ |
+| **CLI for Managing Application** | ✅ | ✅ | ✅ |
+| **Automated Schema Rollback** | ❌ | ✅ | ✅ |
+| **Team Collaboration Workflows** | ❌ | ✅ | ✅ |
+| **Analytics Access** | ❌ | ✅ | ✅ |
+| **Multi-tenancy Support** | ❌ | ❌ | ✅ |
+| **Auditing & Policy Features** | ❌ | ❌ | ✅ |
+| **Support** | Community | Email | Enterprise with SLA |
 
 
-## Main components and definitions
+## Key Concepts
 
-reDB introduces a mesh-based platform purpose-built to unify connectivity, structure, and automation for distributed data environments.
-Key Value Propositions of reDB: <br>
-* Effortless, policy-driven data access and migration. <br>
-* Zero-downtime migrations and real-time replication. <br>
-* Unified model for schema and data harmonization.<br>
-* AI-ready (MCP server), privacy-first, and compliance by design.<br>
-
-
-The following table explains the customer-facing key hierarchy and concepts of the application.
+The following explains the key concepts within the platform.
 
 | Concept | Parent | Description |
 |---------|--------|-------------|
 | **Mesh** | | A collection of nodes form a Mesh |
 | **Node** | Mesh | A single instance of the application forms a Node |
 | **Tenant** | | A logically separated customer organization |
-| **User** | Tenant | A human user that has access to the application |
-| **API Token** | User | A programmatic user that has access to the application |
-| **Group** | Tenant | User groups used for organizing users
-| **Role** | Tenant | Roles are used for grouping permissions |
-| **Permission** | Tenant | Granular persmissions for allowing and/or denying access to resources |
-| **Policy** | Tenant | A tenant-specific policy for allowing and/or denying access to capabilities and/or resources based on rules |
-| **Anchor** | Tenant | A tenant-specific, special type of Node that is used to only access databases, does not host API-access or MCP servers |
-| **Satellite** | Tenant | A tenant-specific, special type of Node that is used to only host API-access or MCP-servers, no database connections |
 | **Workspace** | Tenant | A logically separated collection of resources within a Tenant |
 | **Instance** | Workspace | A database instance which can host multiple logical databases |
 | **Database** | Instance | A single logical database that is hosted in an Instance |
@@ -92,8 +116,6 @@ The following table explains the customer-facing key hierarchy and concepts of t
 | **Table** | Database | A structure within the Database that is explicitely used for storing Data |
 | **Column** | Table | A column within a Table that has a set of particular properties for storing specific Data |
 | **Data** | Column | The actual data stored in a database, most commonly columns of a table, data is usually made up from rows |
-| **Region** | Tenant/Mesh | A customer location, such as a data center or cloud region, used to model the physical location of resources |
-| **Environment** | Workspace | A logical grouping of resources to form a model of an application environment |
 | **Repository** | Workspace | A Repository is used to store the different versions of Database Schemas |
 | **Branch** | Repository | A Repository can have multiple Branches, each optionally connected to a Database |
 | **Commit** | Branch | A specific version of the Schema |
@@ -102,67 +124,50 @@ The following table explains the customer-facing key hierarchy and concepts of t
 | **Relationship** | Mapping | A snapshotting, backup, replication, or migration relationship between two database or other resources |
 | **Transformation** | Tenant | A data transformation function that mutates the data during the snapshot, backup, replication, or migration process |
 | **MCP Server** | Tenant | A Model Context Protocol server that provides access to resources defined using Mappings |
-| **MCP Resource** | MCP Server | A resource object generally used to access data as defined in the MCP definition |
-| **MCP Tool** | MCP Server | A tool or function type of an interface used to command the infrastructure as defined in the MCP definition |
-| **MCP Prompt** | MCP Server | A prompt template as defined in the MCP definition |
+
+> [!NOTE]
+> The full list of concepts can be found [here](concepts.md).
 
 
-## Databases Support Matrix
+## Databases Implementation Matrix
 
+The reDB platform supports the following data stores.
 
+| Database | Type | CLI | API | Core | CDC |
+|----------|------|:---:|:---:|:---.:|
+| Cassandra | Wide-Column          | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| Chroma | Vector                  | ⛔️ | ⛔️ | ⛔️ | ✖️ |
+| Clickhouse | Columnar Analytics  | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| CosmosDB | Multi-Model           | ⛔️ | ⛔️ | ⛔️ | ⛔️ |
+| CockroachDB | Distributed-SQL    | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| DynamoDB | Key-Value / Document  | ⛔️ | ⛔️ | ⛔️ | ⛔️ |
+| IBM Db2 | Relational             | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
+| EdgeDB (Gel) | Object-Relalional | ⚠️ | ⚠️ | ✅ | ✖️ |
+| ElasticSearch | Search           | ⚠️ | ⚠️ | ✅ | ✖️ |
+| MariaDB | Relational             | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| Milvus | Vector                  | ⛔️ | ⛔️ | ⛔️ | ✖️ |
+| MongoDB | Document Store         | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| MS-SQL | Relational              | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
+| MySQL | Relational               | ✅ | ✅ | ✅ | ⚠️ |
+| Neo4j | Graph                    | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| Oracle Database | Relational     | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
+| Pinecone | Vector                | ⚠️ | ⚠️ | ⚠️ | ✖️ |
+| PostgreSQL | Relational          | ✅ | ✅ | ✅ | ⚠️ |
+| Redis | Key-Value Store          | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| Snowflake | Columnar Analytics   | ⚠️ | ⚠️ | ✅ | ✖️ |
+| Weaviate | Vector                | ⛔️ | ⛔️ | ⛔️ | ✖️ |
+| Zilliz | Vector                  | ⛔️ | ⛔️ | ⛔️ | ✖️ |
 
+The status indicators are:
+- ✅ **Implemented and Tested** 
+- ⚠️ **Partially Implemented** 
+- ⛔️ **Not Implemented** 
+- ✖️ **No Support**
 
-<details>
-<summary> Definitions and indicators (expand) </summary>
+The detailed implementation status can be found [here](database-implementation-status.md)
 
-
-
-The following table shows the capabilities of the supported database technologies. The columns are:
-- **Database** - The name of the database
-- **Type** - The type of the database
-- **Usage** - Is the database used for OLTP, OLAP, or Hybrid purposes
-- **System Database** - Does the database have a system database (such as PostgreSQL has `postgres`)
-- **Logical DBs** - Does the database support multiple logical databases within one instance
-- **CDC Support** - Does the database support Change Data Capture (CDC) for replication events
-
-The indicators are:
-- ✅ **Supported Feature** - The DB fully supports this feature 
-- ⚠️ **Partially Supported Feature**  - The DB partially supports this feature
-- ⛔️ **Feature Not Supported** - The feature is not supported by the DB
-
-</details>
-
-
-| Database | Type | Usage | System Database | Logical DBs | CDC Support | 
-|----------|------|-------|     :----:      |    :----:   |   :----:    |      
-| Cassandra | Wide-Column | OLTP | ⛔️ | ✅ | ✅ |
-| Chroma | Vector | OLTP | ⛔️ | ⛔️ | ⛔️ | ⛔️ ⛔️ ⛔️ ✖️ |
-| Clickhouse | Columnar Analytics | OLAP | ✅ | ✅ | ⚠️ | 
-| CosmosDB | Multi-Model | OLTP | ✅ | ✅ | ✅ | 
-| CockroachDB | Distributed-SQL | OLTP| ✅ | ✅ | ✅ | 
-| DynamoDB | Key-Value / Document | OLTP | ⛔️ | ⛔️ | ✅ | 
-| IBM Db2 | Relational | Hybrid | ✅ | ✅ | ✅ | 
-| EdgeDB (Gel) | Object-Relational | OLTP | ✅ | ✅ | ⛔️ | 
-| ElasticSearch | Search | OLAP | ⛔️ | ⛔️ | ⛔️ | 
-| MariaDB | Relational | Hybrid | ✅ | ✅ | ✅ | 
-| Milvus | Vector | OLTP | ⛔️ | ⛔️ | ⛔️ | 
-| MongoDB | Document Store | OLTP | ✅ | ✅ | ✅ | 
-| MS-SQL | Relational | Hybrid | ✅ | ✅ | ✅ | 
-| MySQL | Relational | Hybrid | ✅ | ✅ | ✅ | 
-| Neo4j | Graph | OLTP | ⛔️ | ✅ | ⚠️ | 
-| Oracle Database | Relational | Hybrid | ✅ | ✅ | ✅ |
-| Pinecone | Vector | OLTP | ⛔️ | ⛔️ | ⛔️ | 
-| PostgreSQL | Relational | Hybrid | ✅ | ✅ | ✅ |
-| Redis | Key-Value Store | OLTP | ⛔️ | ⛔️ | ⚠️ | 
-| Snowflake | Columnar Analytics | OLAP | ✅ | ✅ | ✅ | 
-| Weaviate | Vector | OLTP | ⛔️ | ⛔️ | ⛔️ | 
-| Zilliz | Vector | OLTP | ⛔️ | ⛔️ | ⛔️ | 
-
-The detailed implementation status can be found [here](https://github.com/redbco/redb-docs-dev/blob/main/DB-implementation-status.md)
 
 ## CLI Endpoint Commands and Definitions
-
-
 
 <details>
 <summary> Authentication Commands </summary>
@@ -489,62 +494,4 @@ The detailed implementation status can be found [here](https://github.com/redbco
 
 ## CLI Commands Implementation Status
 
-The latest status can be found from here: [CLI Status](https://github.com/redbco/redb-docs-dev/blob/main/CLI-implementation-status.md)
-
-
-## Build Instructions
-
-This project uses Make for building and managing the application. Here are the available make targets:
-
-<details>
-<summary> Basic Build Commands </summary>
-
-- `make all` - Clean, generate proto files, build, and test
-- `make build` - Build all services (cross-compile for Linux by default)
-- `make local` - Build for local development (host OS)
-- `make dev` - Development build (clean, proto, build, test)
-- `make clean` - Remove build artifacts
-
-</details>
-
-<details>
-<summary> Development Commands </summary>
- 
-- `make test` - Run all tests
-- `make proto` - Generate Protocol Buffer code
-- `make lint` - Run linter
-- `make dev-tools` - Install development tools (golangci-lint, protoc-gen-go, protoc-gen-go-grpc)
-
-</details>
-
-<details>
-<summary> Advanced Build Commands </summary>
-
-- `make build-all` - Build for multiple platforms (Linux/macOS, amd64/arm64)
-- `make install` - Install binaries (Linux only)
-- `make version` - Show version information
-
-</details>
-
-<details>
-<summary> Examples </summary>
-
-```bash
-# Build for local development
-make local
-
-# Build for production (Linux)
-make build
-
-# Run tests
-make test
-
-# Install development tools
-make dev-tools
-
-# Build for all platforms
-make build-all
-```
-</details>
-
-The build process creates binaries in the `bin/` directory for local builds and `build/` directory for multi-platform builds.
+The latest status can be found from here: [CLI Status](cli-implementation-status.md)
