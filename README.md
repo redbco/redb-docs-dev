@@ -16,10 +16,9 @@ Easy and fast move of data between your favorite DBs with automatic matching!
 
 LINUX instructions in brief
 
-```bash
-# Install PostgreSQL 17 as prerequisite (if not installed already)
-# Create an admin user that the application can use for initialization
-# Install Redis Server as a prerequisite (if not installed already)
+- Install PostgreSQL 17 as prerequisite (if not installed already)
+- Create an admin user that the application can use for initialization
+- Install Redis Server as a prerequisite (if not installed already)
 ```
 
 ```bash
@@ -52,9 +51,10 @@ redb@redb-demo:~$ ./redb-cli auth login
 redb@redb-demo:~$ ./redb-cli add workspace
 ```
 
-More detailed instructions: [LINUX users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-linux.md)
-[macOS users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-macos.md)
-Windows users: link to be added
+More detailed instructions: 
+- [LINUX users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-linux.md)
+- [macOS users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-macos.md)
+- Windows users: link to be added
 
 ## Architecture overview
 
