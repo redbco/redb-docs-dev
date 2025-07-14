@@ -1,4 +1,4 @@
-# Installation Instructions for macOS (TO BE UPDATED)
+# Installation Instructions for macOS (TO BE VERIFIED BY TOMMI)
 
 ## Downloaded package
 
@@ -11,6 +11,8 @@ brew services start postgresql
 
 
 # Create an admin user that the application can use for initialization
+psql -d postgres
+CREATE USER your_admin_user WITH ENCRYPTED PASSWORD 'your_admin_password' CREATEDB CREATEROLE LOGIN;
 
 
 # Install Redis Server as a prerequisite using homebrew (if not installed already)
