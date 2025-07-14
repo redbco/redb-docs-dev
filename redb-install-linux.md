@@ -1,87 +1,84 @@
-# Installation guide for LINUX (TO-BE-UPDATED)
+# Installation instruction for LINUX 
 
 
-This guide provides step-by-step instructions for installing software on Linux systems. The steps below are suitable for most open-source projects and can be adapted for your specific software.
-
-## Prerequisites
-
-- A Linux system (e.g., Ubuntu, Debian, Fedora, CentOS)
-- Terminal access with sudo privileges
-- Internet connection
-
-## 1. Update Your System
-
-Before installing new software, update your package index to ensure you have the latest information:
+## Downloaded package
 
 ```bash
-sudo apt update        # For Debian/Ubuntu-based systems
-sudo dnf check-update  # For Fedora-based systems
+# Install PostgreSQL 17 as prerequisite (if not installed already)
+sudo apt install -y postgresql-common
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+sudo apt update
+sudo apt -y install postgresql
+
+# Create an admin user that the application can use for initialization
+sudo -u postgres psql
+CREATE USER your_admin_user WITH ENCRYPTED PASSWORD 'your_admin_password' CREATEDB CREATEROLE LOGIN;
+exit
+
+# Install Redis Server as a prerequisite (if not installed already)
+sudo apt install redis-server
+
+# For arm64-based systems
+Go to https://download.redb.co and download the right package from the 'latest version'
+Direct link to the arm64 directory https://download.redb.co/linux/latest/arm64/
+
+# For amd64-based systems
+Go to https://download.redb.co and download the right package from the 'latest version'
+Direct link to the amd64 directory https://download.redb.co/linux/latest/amd64/
 ```
 
-
-## 2. Install Dependencies
-
-Check your software’s documentation for any required dependencies. Install them using your package manager. For example:
+## Initializing the installation
 
 ```bash
-sudo apt install  
+# Initialize the reDB installation
+./redb-supervisor --initialize
+
+# If prompted, provide the PostgreSQL details
+Enter PostgreSQL username [postgres]: your_admin_user
+Enter PostgreSQL password: *your_admin_password*
+Enter PostgreSQL host [localhost]: 
+Enter PostgreSQL port [5432]: 
+
+# Select "y" to create the default tenant and user - required for a fresh install
+Would you like to create a default tenant and user? (y/N): y
+
+# Enter the details of the default tenant and user
+Enter tenant name: tenant_name
+Enter admin user email: you@domain.com
+Enter admin user password: *your_new_login_password*
+Confirm password: *your_new_login_password*
+
+# Initialization is complete, ready to start the application
+./redb-supervisor
+
+# The application can be run in the background as a service
 ```
 
-
-## 3. Download the Software
-
-Clone the repository or download the release package:
-
-- **Clone via Git:**
-  ```bash
-  git clone https://github.com/yourusername/your-repo.git
-  cd your-repo
-  ```
-- **Download a Release:**
-  - Download the `.tar.gz` or `.zip` file from the Releases page.
-  - Extract it:
-    ```bash
-    tar -xzf your-software.tar.gz
-    cd your-software
-    ```
-
-
-## 4. Build and Install
-
-If your software requires compilation (from source):
-
-1. **Read the README and INSTALL files** for specific instructions.
-2. **Typical build steps:**
-   ```bash
-   ./configure
-   make
-   sudo make install
-   ```
-   - Some projects use `cmake` or other build systems; adjust accordingly.
-[1][2][3]
-
-## 5. Install via Package Manager (If Available)
-
-If your software is available in your distribution’s repositories, you can install it directly:
-
-- **Debian/Ubuntu:**
-  ```bash
-  sudo apt install 
-  ```
-- **Fedora:**
-  ```bash
-  sudo dnf install 
-  ```
-
-
-## 6. Verify Installation
-
-Check that the software is installed and accessible:
+## Using the application for the first time
 
 ```bash
- --version
-```
-or
-```bash
-which 
+# Logging in
+redb@redb-demo:~$ ./redb-cli auth login
+Username (email): demo@redb.co
+Password: 
+Hostname (default: localhost:8080): 
+Tenant URL: demo
+Successfully logged in as demo@redb.co
+Session: reDB CLI (ID: session_1752410814767386264_1nkJhJM4)
+
+Select workspace (press Enter to skip): 
+No workspace selected. Use 'redb-cli select workspace <name>' to select one later.
+redb@redb-demo:~$ 
+
+# Creating your first workspace
+redb@redb-demo:~$ ./redb-cli add workspace
+Workspace Name: demo
+Description (optional): reDB demo workspace
+Successfully created workspace 'demo' (ID: ws_0000019803D4CBCEBCA9C6AB2D)
+redb@redb-demo:~$
+
+# Selecting the current workspace
+redb@redb-demo:~$ ./redb-cli select workspace demo
+Selected workspace: demo (ID: ws_0000019803D4CBCEBCA9C6AB2D)
+redb@redb-demo:~$
 ```
