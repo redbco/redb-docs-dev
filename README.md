@@ -134,29 +134,29 @@ The following explains the key concepts within the platform.
 The reDB platform supports the following data stores.
 
 | Database | Type | CLI | API | Core | CDC |
-|----------|------|:---:|:---:|:---:|
-| Cassandra | Wide-Column          | ⚠️ | ⚠️ | ✅ | ⚠️ |
-| Chroma | Vector                  | ⛔️ | ⛔️ | ⛔️ | ✖️ |
+|----------|------|:---:|:---:|:----:|:---:|
+| Cassandra | Wide-Column | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| Chroma | Vector | ⛔️ | ⛔️ | ⛔️ | ✖️ |
 | Clickhouse | Columnar Analytics  | ⚠️ | ⚠️ | ✅ | ⚠️ |
-| CosmosDB | Multi-Model           | ⛔️ | ⛔️ | ⛔️ | ⛔️ |
-| CockroachDB | Distributed-SQL    | ⚠️ | ⚠️ | ✅ | ⚠️ |
-| DynamoDB | Key-Value / Document  | ⛔️ | ⛔️ | ⛔️ | ⛔️ |
-| IBM Db2 | Relational             | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
+| CosmosDB | Multi-Model | ⛔️ | ⛔️ | ⛔️ | ⛔️ |
+| CockroachDB | Distributed-SQL | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| DynamoDB | Key-Value / Document | ⛔️ | ⛔️ | ⛔️ | ⛔️ |
+| IBM Db2 | Relational | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
 | EdgeDB (Gel) | Object-Relalional | ⚠️ | ⚠️ | ✅ | ✖️ |
-| ElasticSearch | Search           | ⚠️ | ⚠️ | ✅ | ✖️ |
-| MariaDB | Relational             | ⚠️ | ⚠️ | ✅ | ⚠️ |
-| Milvus | Vector                  | ⛔️ | ⛔️ | ⛔️ | ✖️ |
-| MongoDB | Document Store         | ⚠️ | ⚠️ | ✅ | ⚠️ |
-| MS-SQL | Relational              | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
-| MySQL | Relational               | ✅ | ✅ | ✅ | ⚠️ |
-| Neo4j | Graph                    | ⚠️ | ⚠️ | ✅ | ⚠️ |
-| Oracle Database | Relational     | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
-| Pinecone | Vector                | ⚠️ | ⚠️ | ⚠️ | ✖️ |
-| PostgreSQL | Relational          | ✅ | ✅ | ✅ | ⚠️ |
-| Redis | Key-Value Store          | ⚠️ | ⚠️ | ✅ | ⚠️ |
-| Snowflake | Columnar Analytics   | ⚠️ | ⚠️ | ✅ | ✖️ |
-| Weaviate | Vector                | ⛔️ | ⛔️ | ⛔️ | ✖️ |
-| Zilliz | Vector                  | ⛔️ | ⛔️ | ⛔️ | ✖️ |
+| ElasticSearch | Search | ⚠️ | ⚠️ | ✅ | ✖️ |
+| MariaDB | Relational | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| Milvus | Vector | ⛔️ | ⛔️ | ⛔️ | ✖️ |
+| MongoDB | Document Store | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| MS-SQL | Relational | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
+| MySQL | Relational | ✅ | ✅ | ✅ | ⚠️ |
+| Neo4j | Graph | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| Oracle Database | Relational | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
+| Pinecone | Vector | ⚠️ | ⚠️ | ⚠️ | ✖️ |
+| PostgreSQL | Relational | ✅ | ✅ | ✅ | ⚠️ |
+| Redis | Key-Value Store | ⚠️ | ⚠️ | ✅ | ⚠️ |
+| Snowflake | Columnar Analytics | ⚠️ | ⚠️ | ✅ | ✖️ |
+| Weaviate | Vector | ⛔️ | ⛔️ | ⛔️ | ✖️ |
+| Zilliz | Vector | ⛔️ | ⛔️ | ⛔️ | ✖️ |
 
 The status indicators are:
 - ✅ **Implemented and Tested** 
