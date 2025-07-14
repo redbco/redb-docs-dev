@@ -19,7 +19,6 @@ LINUX instructions in brief
 - Install PostgreSQL 17 as prerequisite (if not installed already)
 - Create an admin user that the application can use for initialization
 - Install Redis Server as a prerequisite (if not installed already)
-```
 
 ```bash
 # reDB pckage for arm64-based systems
@@ -53,7 +52,7 @@ redb@redb-demo:~$ ./redb-cli add workspace
 
 More detailed instructions: 
 - [LINUX users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-linux.md)
-- [macOS users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-macos.md)
+- macOS users: link to be added
 - Windows users: link to be added
 
 ## Architecture overview
