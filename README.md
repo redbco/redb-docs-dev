@@ -17,11 +17,14 @@ Enterprise Plan includes: Same as Startup/Team AND Unlimited nodes, Extended DB 
 
 LINUX instructions in brief
 
+```bash
 # Install PostgreSQL 17 as prerequisite (if not installed already)
 # Create an admin user that the application can use for initialization
 # Install Redis Server as a prerequisite (if not installed already)
-# For arm64-based systems
+```
+
 ```bash
+# For arm64-based systems
 wget https://download.redb.co/linux/latest/arm64/redb-latest-linux-arm64.tar.gz
 tar -xvzf redb-latest-linux-arm64.tar.gz
 ```
