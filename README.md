@@ -5,12 +5,11 @@ Easy and fast move of data between your favorite DBs with automatic matching!
 
 ## 3 plans for different needs:
 
-Developer Plan (FREE) includes: DB connectivity for select DBs, Schema and version control, Limited replication features, Limited migration features (# of tables), MCP server access, Authentication & role-based access, 
-CLI for managing the application, Community support
+Developer Plan (FREE) includes: DB connectivity for select DBs, schema and version control, limited replication features, limited migration features (# of tables), MCP server access, authentication & role-based access, CLI for managing the application, community support
 
-Startup & Teams Plan (up-to 3 nodes included) includes: Same as Developer AND Automated schema rollback, Full replication features, Full migration features, Team collaboration workflows, Limited analytics access, Email support
+Startup & Teams Plan ($20/month per user, up-to 3 nodes included) includes: same as Developer plan AND automated schema rollback, full replication features, full migration features, team collaboration workflows, limited analytics access, email support
 
-Enterprise Plan includes: Same as Startup/Team AND Unlimited nodes, Extended DB connectivity, Multi-tenancy support, Real-time multi-master replication, Full auditing & policy features, Full analytics access, Enterprise support with SLA
+Enterprise Plan includes: Same as Startup/Team plan AND unlimited nodes, extended DB connectivity, multi-tenancy support, real-time multi-master replication, full auditing & policy features, full analytics access, enterprise support with SLA
  
 
 ## Quick start
@@ -53,6 +52,7 @@ redb@redb-demo:~$ ./redb-cli auth login
 redb@redb-demo:~$ ./redb-cli add workspace
 ```
 
+More detailed instructions: [LINUX users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-linux.md)
 
 ## Architecture overview
 
