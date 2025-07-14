@@ -21,7 +21,7 @@ LINUX instructions in brief
 - Install Redis Server as a prerequisite (if not installed already)
 
 ```bash
-# reDB pckage for arm64-based systems
+# reDB package for arm64-based systems
 wget https://download.redb.co/linux/latest/arm64/redb-latest-linux-arm64.tar.gz
 tar -xvzf redb-latest-linux-arm64.tar.gz
 ```
