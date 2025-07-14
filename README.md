@@ -5,11 +5,11 @@ Easy and fast move of data between your favorite DBs with automatic matching!
 
 ## 3 plans for different needs:
 
-<ins>Developer Plan (FREE)</INS> includes: DB connectivity for select DBs, schema and version control, limited replication features, limited migration features (# of tables), MCP server access, authentication & role-based access, CLI for managing the application, community support
+<INS>Developer Plan (FREE)</INS> includes: DB connectivity for select DBs, schema and version control, limited replication features, limited migration features (# of tables), MCP server access, authentication & role-based access, CLI for managing the application, community support
 
-Startup & Teams Plan ($20/month per user, up-to 3 nodes included) includes: same as Developer plan AND automated schema rollback, full replication features, full migration features, team collaboration workflows, limited analytics access, email support
+<INS>Startup & Teams Plan </INS> ($20/month per user, up-to 3 nodes included) includes: same as Developer plan AND automated schema rollback, full replication features, full migration features, team collaboration workflows, limited analytics access, email support
 
-Enterprise Plan includes: Same as Startup/Team plan AND unlimited nodes, extended DB connectivity, multi-tenancy support, real-time multi-master replication, full auditing & policy features, full analytics access, enterprise support with SLA
+<INS>Enterprise Plan </INS> (custom pricing) includes: Same as Startup/Team plan AND unlimited nodes, extended DB connectivity, multi-tenancy support, real-time multi-master replication, full auditing & policy features, full analytics access, enterprise support with SLA
  
 
 ## Quick start
@@ -53,6 +53,8 @@ redb@redb-demo:~$ ./redb-cli add workspace
 ```
 
 More detailed instructions: [LINUX users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-linux.md)
+[macOS users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-macos.md)
+Windows users: link to be added
 
 ## Architecture overview
 
@@ -490,10 +492,6 @@ The detailed implementation status can be found [here](https://github.com/redbco
 
 The latest status can be found from here: [CLI Status](https://github.com/redbco/redb-docs-dev/blob/main/CLI-implementation-status.md)
 
-## Installation instructions and packages
-### [LINUX users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-linux.md)
-### [macOS users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-macos.md)
-### Windows users: installation guide to be added
 
 ## Build Instructions
 
