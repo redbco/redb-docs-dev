@@ -5,7 +5,7 @@ Easy and fast move of data between your favorite DBs with automatic matching!
 
 ## 3 plans for different needs:
 
-<INS>Developer Plan (FREE)</INS> includes: DB connectivity for select DBs, schema and version control, limited replication features, limited migration features (# of tables), MCP server access, authentication & role-based access, CLI for managing the application, community support
+<INS>Developer Plan </INS> (FREE) includes: DB connectivity for select DBs, schema and version control, limited replication features, limited migration features (# of tables), MCP server access, authentication & role-based access, CLI for managing the application, community support
 
 <INS>Startup & Teams Plan </INS> ($20/month per user, up-to 3 nodes included) includes: same as Developer plan AND automated schema rollback, full replication features, full migration features, team collaboration workflows, limited analytics access, email support
 
