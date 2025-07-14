@@ -1,4 +1,4 @@
-# CLI Endpoint Implementation Status (updated July 10th, 2025)
+# CLI Endpoint Implementation Status (updated July 14th, 2025)
 
 ## The following tables show the implementation status of CLI commands across different resource types. The status indicators are:
 - ✅ **Implemented** - Command is fully functional
@@ -127,6 +127,7 @@
 | ✅ | `wipe database` | `<database>` | Delete all data and schema from the database (results in an empty database) |
 | ⚠️ | `create database` | | Create a new database through a connected instance |
 | ⚠️ | `drop database` | `<database>` | Drop the database (the database will not exist after this operation) |
+| ✅ | `clone table-data` | `<mapping>` | Clone data from the source table to the target table using the mapping |
 
 ### Repository Commands
 
@@ -151,9 +152,9 @@
 
 | Status | Command | Arguments | Description |
 |--------|---------|-----------|-------------|
-| ⚠️ | `list mappings` | | List all existing mappings |
-| ⚠️ | `show mapping` | `<mapping>` | Show details of a mapping |
-| ⚠️ | `add mapping` | `<--empty> <--table> <--database>` | Create a new mapping |
+| ✅ | `list mappings` | | List all existing mappings |
+| ✅ | `show mapping` | `<mapping>` | Show details of a mapping |
+| ✅ | `add table-mapping` | | Create a new mapping between a source and a target table |
 | ⚠️ | `modify mapping` | `<mapping>` | Modify the details of a mapping |
 | ⚠️ | `delete mapping` | `<mapping>` | Delete a mapping |
 | ⚠️ | `attach mapping-rule` | `<mapping-rule> <mapping>` | Attache a mapping rule to a mapping |
@@ -168,8 +169,8 @@
 
 | Status | Command | Arguments | Description |
 |--------|---------|-----------|-------------|
-| ⚠️ | `list relationships` | | List all existing relationships |
-| ⚠️ | `show relationship` | `<relationship>` | Show the details of a relationship |
+| ✅ | `list relationships` | | List all existing relationships |
+| ✅ | `show relationship` | `<relationship>` | Show the details of a relationship |
 | ⚠️ | `add relationship` | | Create a new relationship |
 | ⚠️ | `modify relationship` | `<relationship>` | Modify the details of a relationship |
 | ⚠️ | `delete relationship` | `<relationship>` | Delete a relationship |
