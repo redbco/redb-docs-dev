@@ -12,7 +12,7 @@ Easily and rapidly move data between your favorite databases with instant automa
 <INS>Enterprise Plan </INS> (custom pricing) includes: Same as Startup/Team plan AND unlimited nodes, extended DB connectivity, multi-tenancy support, real-time multi-master replication, full auditing & policy features, full analytics access, enterprise support with SLA
  
 
-## Quick start
+## Quick start for developers
 
 LINUX instructions in brief
 
