@@ -436,9 +436,9 @@ The detailed implementation status can be found [here](https://github.com/redbco
 
 The latest status can be found from here: [CLI Status](https://github.com/redbco/redb-docs-dev/blob/main/CLI-implementation-status.md)
 
-## Installation packages
-### [LINUX users: installation guide](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-linux.md)
-### [macOS users: installation guide](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-macos.md)
+## Installation instructions and packages
+### [LINUX users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-linux.md)
+### [macOS users: installation instructions](https://github.com/redbco/redb-docs-dev/blob/main/redb-install-macos.md)
 ### Windows users: installation guide to be added
 
 ## Build Instructions
