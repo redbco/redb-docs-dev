@@ -1,4 +1,4 @@
-# Installation Guide for macOS (TO BE UPDATED)
+# Installation Instructions for macOS (TO BE UPDATED)
 
 ## Downloaded package
 
