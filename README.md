@@ -24,16 +24,34 @@ LINUX instructions in brief
 ```
 
 ```bash
-# For arm64-based systems
+# reDB pckage for arm64-based systems
 wget https://download.redb.co/linux/latest/arm64/redb-latest-linux-arm64.tar.gz
 tar -xvzf redb-latest-linux-arm64.tar.gz
 ```
 ```bash
-# For amd64-based systems
+# reDB package for amd64-based systems
 wget https://download.redb.co/linux/latest/amd64/redb-latest-linux-amd64.tar.gz
 tar -xvzf redb-latest-linux-amd64.tar.gz
 ```
 
+```bash
+# Initialize the reDB installation
+./redb-supervisor --initialize
+```
+```bash
+
+# Initialization is complete, ready to start the application
+./redb-supervisor
+```
+
+```bash
+# Logging in
+redb@redb-demo:~$ ./redb-cli auth login
+```
+```bash
+# Creating your first workspace
+redb@redb-demo:~$ ./redb-cli add workspace
+```
 
 
 ## Architecture overview
