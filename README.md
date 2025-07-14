@@ -77,6 +77,9 @@ Clone the data from the source table to the target table
 - MacOS: instructions to be added
 - Windows: instructions to be added
 
+> [!TIP]
+> Downloadable application packages are available at [https://download.redb.co](https://download.redb.co).
+
 ## Plans
 
 The reDB platform is openly available as a free developer version for non-commercial use. We also offer paid versions for commercial use.
@@ -494,4 +497,4 @@ The detailed implementation status can be found [here](database-implementation-s
 
 ## CLI Commands Implementation Status
 
-The latest status can be found from here: [CLI Status](cli-implementation-status.md)
+The latest status can be found from here: [CLI Status](cli-implementation.md)
