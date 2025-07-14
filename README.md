@@ -1,6 +1,6 @@
 # reDB Platform
 
-Easy and fast move of data between your favorite DBs with automatic matching!
+Easily and rapidly move data between your favorite databases with instant automatic schema matching for maximum efficiency.
 
 
 ## 3 plans for different needs:
