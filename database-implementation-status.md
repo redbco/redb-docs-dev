@@ -13,7 +13,7 @@ The status indicators are:
 - ✖️ **No Support** 
 
 | Database | Type | CLI | API | Core | CDC |
-|----------|------|:---:|:---:|:---.:|
+|----------|------|:---:|:---:|:---:|
 | Cassandra | Wide-Column          | ⚠️ | ⚠️ | ✅ | ⚠️ |
 | Chroma | Vector                  | ⛔️ | ⛔️ | ⛔️ | ✖️ |
 | Clickhouse | Columnar Analytics  | ⚠️ | ⚠️ | ✅ | ⚠️ |

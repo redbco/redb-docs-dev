@@ -134,7 +134,7 @@ The following explains the key concepts within the platform.
 The reDB platform supports the following data stores.
 
 | Database | Type | CLI | API | Core | CDC |
-|----------|------|:---:|:---:|:---.:|
+|----------|------|:---:|:---:|:---:|
 | Cassandra | Wide-Column          | ⚠️ | ⚠️ | ✅ | ⚠️ |
 | Chroma | Vector                  | ⛔️ | ⛔️ | ⛔️ | ✖️ |
 | Clickhouse | Columnar Analytics  | ⚠️ | ⚠️ | ✅ | ⚠️ |
