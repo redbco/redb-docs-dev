@@ -1,12 +1,37 @@
-# reDB_Documentation
+# reDB Platform
 
-## Introduction
-reDB introduces a mesh-based platform purpose-built to unify connectivity, structure, and automation for distributed data environments.
-Key Value Propositions of reDB: <br>
-* Effortless, policy-driven data access and migration. <br>
-* Zero-downtime migrations and real-time replication. <br>
-* Unified model for schema and data harmonization.<br>
-* AI-ready (MCP server), privacy-first, and compliance by design.<br>
+Easy and fast move of data between your favorite DBs with automatic matching!
+
+
+## 3 plans for different needs:
+
+Developer Plan (FREE) includes: DB connectivity for select DBs, Schema and version control, Limited replication features, Limited migration features (# of tables), MCP server access, Authentication & role-based access, 
+CLI for managing the application, Community support
+
+Startup & Teams Plan (up-to 3 nodes included) includes: Same as Developer AND Automated schema rollback, Full replication features, Full migration features, Team collaboration workflows, Limited analytics access, Email support
+
+Enterprise Plan includes: Same as Startup/Team AND Unlimited nodes, Extended DB connectivity, Multi-tenancy support, Real-time multi-master replication, Full auditing & policy features, Full analytics access, Enterprise support with SLA
+ 
+
+## Quick start
+
+LINUX instructions in brief
+
+# Install PostgreSQL 17 as prerequisite (if not installed already)
+# Create an admin user that the application can use for initialization
+# Install Redis Server as a prerequisite (if not installed already)
+# For arm64-based systems
+```bash
+wget https://download.redb.co/linux/latest/arm64/redb-latest-linux-arm64.tar.gz
+tar -xvzf redb-latest-linux-arm64.tar.gz
+```
+```bash
+# For amd64-based systems
+wget https://download.redb.co/linux/latest/amd64/redb-latest-linux-amd64.tar.gz
+tar -xvzf redb-latest-linux-amd64.tar.gz
+```
+
+
 
 ## Architecture overview
 
@@ -14,6 +39,14 @@ Key Value Propositions of reDB: <br>
 
 
 ## Main components and definitions
+
+reDB introduces a mesh-based platform purpose-built to unify connectivity, structure, and automation for distributed data environments.
+Key Value Propositions of reDB: <br>
+* Effortless, policy-driven data access and migration. <br>
+* Zero-downtime migrations and real-time replication. <br>
+* Unified model for schema and data harmonization.<br>
+* AI-ready (MCP server), privacy-first, and compliance by design.<br>
+
 
 The following table explains the customer-facing key hierarchy and concepts of the application.
 
