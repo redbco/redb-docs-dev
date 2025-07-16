@@ -1,13 +1,18 @@
-# reDB Platform
+# reDB
 
-Easily and rapidly move data between your favorite databases with instant automatic schema matching for maximum efficiency.
+reDB is a platform for moving and accessing data between different database technologies and locations.
+
+The main features are:
+- Easily move data between database technologies
+- Automatic schema mapping and matching between databases and tables
+- Integrated repository-based version control of schemas
+- Powerful data cloning, migration, replication, and backup capabilities
+- Mesh-based approach for hassle-free site-to-site connectivity
+- Data transformation and obfuscation capabilities
 
 ## How to get started
 
 Quick start instructions for Debian (arm64/amd64)
-
-> [!IMPORTANT]
-> You need to have PostgreSQL 17 (with a user CREATEDB, CREATEROLE, and LOGIN privileges) and Redis Server installed
 
 ### Installation
 
@@ -32,6 +37,9 @@ Start the application (or run as a service)
 ```bash
 ./redb-supervisor
 ```
+
+> [!IMPORTANT]
+> You need to have PostgreSQL 17 (with a user CREATEDB, CREATEROLE, and LOGIN privileges) and Redis Server installed
 
 ### First use
 Login using the CLI
@@ -79,6 +87,12 @@ Clone the data from the source table to the target table
 
 > [!TIP]
 > Downloadable application packages are available at [https://download.redb.co](https://download.redb.co).
+
+## Releases
+
+### v0.0.1 Release Notes (July 14, 2025)
+
+- Initial release with base database connectivity, repositories, and table cloning with data between database technologies
 
 ## Plans
 
