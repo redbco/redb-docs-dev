@@ -93,13 +93,14 @@ The reDB platform is openly available as a free developer version for non-commer
 | **Data Replication** | Limited | Limited | Advanced |
 | **Migration Features** | Limited | Full | Full |
 | **MCP Server Access** | ✅ | ✅ | ✅ |
-| **Authentication & Role-based Access** | ✅ | ✅ | ✅ |
+| **Authentication & Role-based Access** | ❌ | ✅ | ✅ |
 | **CLI for Managing Application** | ✅ | ✅ | ✅ |
 | **Automated Schema Rollback** | ❌ | ✅ | ✅ |
 | **Team Collaboration Workflows** | ❌ | ✅ | ✅ |
 | **Analytics Access** | ❌ | ✅ | ✅ |
 | **Multi-tenancy Support** | ❌ | ❌ | ✅ |
-| **Auditing & Policy Features** | ❌ | ❌ | ✅ |
+| **Policy Driven Data Governance** | ❌ | ❌ | ✅ |
+| **Audit Logging** | ❌ | ❌ | ✅ |
 | **Support** | Community | Email | Enterprise with SLA |
 
 
