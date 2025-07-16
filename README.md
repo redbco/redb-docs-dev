@@ -88,12 +88,12 @@ The reDB platform is openly available as a free developer version for non-commer
 |---------| :-------: | :-------------: | :--------: |
 | **Pricing** | Free | Usage-based | Custom Pricing |
 | **Database Support** | Mainly Open-source | Mainly Open-source | Open-source and Commercial |
-| **Full Mesh Connectivity** | ❌ | ✅ | ✅ |
-| **Schema Version Control** | ✅ | ✅ | ✅ |
 | **Data Replication** | Limited | Limited | Advanced |
 | **Migration Features** | Limited | Full | Full |
+| **Schema Version Control** | ✅ | ✅ | ✅ |
 | **MCP Server Access** | ✅ | ✅ | ✅ |
 | **CLI for Managing Application** | ✅ | ✅ | ✅ |
+| **Full Mesh Connectivity** | ❌ | ✅ | ✅ |
 | **Authentication & Role-based Access** | ❌ | ✅ | ✅ |
 | **Automated Schema Rollback** | ❌ | ✅ | ✅ |
 | **Team Collaboration Workflows** | ❌ | ✅ | ✅ |
